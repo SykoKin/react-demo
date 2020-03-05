@@ -1,13 +1,22 @@
-import React, { useState } from 'react';
-import ReactDom from 'react-dom';
-import './style.css';
+import React, { useState } from 'react';  // 引入React库
+import ReactDom from 'react-dom';         // 引入React-Dom，虚拟Dom render到 实际Dom的对象
+import './style.css';                     // 该 组件/文件 调用的css
+import Icon from './icons';
 
 
 
 // 创建cell组件
 const Cell = function(props) {
-    return (
-    <div className="cell" onClick={() => {props.onClick()}}>{props.text}</div>
+  let type
+  if(props.text) type = props.text === 'X' ? 'ix' : 'io'
+  return (
+    // <div className="cell" onClick={() => {props.onClick()}}>{props.text}</div>
+    <div className="cell" onClick={() => {props.onClick()}}>
+      <Icon
+          className={props.text === 'X' ? '' : 'red'}
+          type={type}
+      />
+    </div>
   )
 }
 
