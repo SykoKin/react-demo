@@ -75,4 +75,4 @@ const Chessboard = function() {
   )
 }
 
-ReactDom.render( <div> <Chessboard /> </div>, document.getElementById('root'))
+ReactDom.render( <div> <Chessboard /> </div>, document.getElementById('root'))  // 这行代码把虚拟Dom 更新到 Dom的 id为root的节点上（根据参数二决定）

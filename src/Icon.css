@@ -2,6 +2,6 @@
   width: 1em;
   height: 1em;
   vertical-align: -0.15em;
-  fill: currentColor; 
+  fill: currentColor; /* fill用currentColor则会自动匹配当前的color属性值 */
   overflow: hidden;
 }
